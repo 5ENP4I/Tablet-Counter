@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TabletCounter"
         mc:Ignorable="d"
         Title="MainWindow" Height="675" Width="360">
-    <Grid Background="#FFEFEFEF">
+    <Grid Background="{StaticResource AntiFlashWhite}">
         <Grid Grid.Row="2">
 
             <Grid.ColumnDefinitions>
@@ -15,23 +15,23 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="Button1" Style="{StaticResource MenuButton}">
-                <Image Source="data\checklist.png"/>
+            <Button x:Name="Button0" Style="{StaticResource MenuButton}" Click="Button0_Click">
+                <Image Source="data\checklist.png" Width="38" Height="38"/>
             </Button>
-            <Button x:Name="Button2" Style="{StaticResource MenuButton}" Grid.Column="1">
-                <Image Source="data\smallHouse.png"/>
+            <Button x:Name="Button1" Style="{StaticResource MenuButton}" Click="Button0_Click" Grid.Column="1">
+                <Image Source="data\smallHouse.png" OpacityMask="Black"/>
             </Button>
-            <Button x:Name="Button3" Style="{StaticResource MenuButton}" Grid.Column="2">
+            <Button x:Name="Button2" Style="{StaticResource MenuButton}" Click="Button0_Click" Grid.Column="2">
                 <Image Source="data\settings.png"/>
             </Button>
 
         </Grid>
 
-        <Label x:Name="Title" Content="Title" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5"/>
+        <Label x:Name="Title" Content="Title" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="65*"/>
-            <RowDefinition Height="610*"/>
+            <RowDefinition Height="550*"/>
             <RowDefinition Height="65*"/>
         </Grid.RowDefinitions>
     </Grid>
