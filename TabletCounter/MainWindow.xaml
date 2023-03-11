@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="675" Width="360">
     <Grid Background="{StaticResource AntiFlashWhite}">
+        
         <Grid Grid.Row="2">
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -26,6 +26,31 @@
             </Button>
 
         </Grid>
+
+        <TabControl x:Name="PanelChanger" Visibility="Visible" TabIndex="1" Grid.Row="1">
+            <TabControl.Template>
+                <ControlTemplate TargetType="{x:Type TabControl}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ContentPresenter Grid.Row="1"
+                                  Content="{TemplateBinding SelectedContent}" />
+                    </Grid>
+                </ControlTemplate>
+            </TabControl.Template>
+            <TabItem Header="Group 1">
+                <Label x:Name="Title1" Background="{StaticResource AntiFlashWhite}" Content="Title1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
+            </TabItem>
+            <TabItem Header="Group 2">
+                <Label x:Name="Title2" Background="{StaticResource AntiFlashWhite}" Content="Title2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
+            </TabItem>
+            <TabItem Header="Group 3">
+                <Label x:Name="Title3" Background="{StaticResource AntiFlashWhite}" Content="Title3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
+            </TabItem>
+            
+        </TabControl>
 
         <Label x:Name="Title" Content="Title" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
 

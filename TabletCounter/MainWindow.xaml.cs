@@ -19,7 +19,14 @@ namespace TabletCounter
     {
         public static Button[] navButtons = new Button[3];
         public static Image[] navImages = new Image[3];
-          
+
+        class Bar
+        {
+            int fill = 0;
+            string name = "";
+            string description = "";
+            bool showInPercents = false;
+        }
 
         public MainWindow()
         {
@@ -50,15 +57,20 @@ namespace TabletCounter
         {
             if (whichIsPressed == navButtons[0])
             {
-                //Menu1
+                PanelChanger.SelectedIndex = 0;
+                PanelChanger.Visibility = Visibility.Visible;
             }
             if (whichIsPressed == navButtons[1])
             {
                 //Menu2
+                PanelChanger.SelectedIndex = 1;
+                PanelChanger.Visibility = Visibility.Visible;
             }
             if (whichIsPressed == navButtons[2])
             {
                 //Menu3
+                PanelChanger.SelectedIndex = 2;
+                PanelChanger.Visibility = Visibility.Visible;
             }
         }
     }
