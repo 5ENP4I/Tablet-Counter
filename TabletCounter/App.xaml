@@ -9,7 +9,7 @@
         <Brush x:Key="Turquoise">#34d1bf</Brush>
         <Brush x:Key="Black">#070707</Brush>
         <Brush x:Key="Cerise">#d1345b</Brush>
-        
+
         <Style x:Key="MenuButton" TargetType="Button">
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
