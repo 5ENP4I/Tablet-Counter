@@ -27,7 +27,7 @@
 
         </Grid>
 
-        <TabControl x:Name="PanelChanger" Visibility="Visible" TabIndex="1" Grid.Row="1">
+        <TabControl x:Name="PanelChanger" Visibility="Visible" TabIndex="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TabControl.Template>
                 <ControlTemplate TargetType="{x:Type TabControl}">
                     <Grid>
@@ -44,7 +44,19 @@
                 <Label x:Name="Title1" Background="{StaticResource AntiFlashWhite}" Content="Title1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
             </TabItem>
             <TabItem Header="Group 2">
-                <Label x:Name="Title2" Background="{StaticResource AntiFlashWhite}" Content="Title2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
+                <Grid>
+                    <Border x:Name="BarPref" HorizontalAlignment="Right" VerticalAlignment="Center" Width="200" Height="30" BorderBrush="{StaticResource Cerise}" BorderThickness="1" CornerRadius="15" Margin="0,0,0,0" Grid.Row="1">
+                        <Grid>
+                            <Border x:Name="BarInside" HorizontalAlignment="Left" VerticalAlignment="Center" Width="199" Height="30" CornerRadius="15" BorderBrush="{StaticResource Cerise}" Background="{StaticResource Cerise}" BorderThickness="0"></Border>
+                            <Label x:Name="ProgressText" Content="100" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </Grid>
+                    </Border>
+                    <Label x:Name="CureName" Content="AMBROBEN" Grid.Row="0"></Label>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                </Grid>
             </TabItem>
             <TabItem Header="Group 3">
                 <Label x:Name="Title3" Background="{StaticResource AntiFlashWhite}" Content="Title3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
