@@ -10,12 +10,17 @@
         <Grid x:Name="HereComesTheTank">
             <Border x:Name="BarOutside" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="30" BorderBrush="{StaticResource Cerise}" BorderThickness="1" CornerRadius="15" Margin="0,0,0,0" Grid.Row="1">
                 <Grid>
-                    <Border x:Name="BarInside" HorizontalAlignment="Left" VerticalAlignment="Center" Width="199" Height="30" CornerRadius="15" BorderBrush="{StaticResource Cerise}" Background="{StaticResource Cerise}" BorderThickness="0"></Border>
-                    <Label x:Name="ProgressText" Content="100" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Border x:Name="BarInside" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="{Binding Fill, Mode=OneWay}" Height="30" CornerRadius="15" BorderBrush="{StaticResource Cerise}" Background="{StaticResource Cerise}" BorderThickness="0"></Border>
+                    <Label x:Name="ProgressText" Content="{Binding CurrentProgres}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,-4,0"></Label>
+                    <Label x:Name="ProgressHelpText" Content="%" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Margin="-4,0,0,0"></Label>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                 </Grid>
             </Border>
-            <Label x:Name="TextAbove" Content="AMBROBEN" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <Label x:Name="TextBellow" Content="After food only" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2"/>
+            <Label x:Name="TextAbove" Content="{Binding Name}" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Label x:Name="TextBellow" Content="{Binding Description}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2"/>
             <Label x:Name="SpaceHolder" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3"/>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

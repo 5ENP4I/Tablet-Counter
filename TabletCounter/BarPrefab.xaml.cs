@@ -18,9 +18,10 @@ namespace TabletCounter
     /// </summary>
     public partial class BarPrefab : UserControl
     {
-        public BarPrefab()
+        public BarPrefab(Bar bar)
         {
             InitializeComponent();
+            DataContext = bar;
         }
     }
 }
