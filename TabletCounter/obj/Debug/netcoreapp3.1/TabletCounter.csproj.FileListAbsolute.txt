@@ -40,4 +40,3 @@ C:\Users\Dima\Desktop\GitHub.png\Tablet-Counter\TabletCounter\obj\Debug\netcorea
 C:\Users\Dima\Desktop\GitHub.png\Tablet-Counter\TabletCounter\obj\Debug\netcoreapp3.1\TabletCounter.genruntimeconfig.cache
 C:\Users\Dima\Desktop\GitHub.png\Tablet-Counter\TabletCounter\obj\Debug\netcoreapp3.1\BarPrefab.g.cs
 C:\Users\Dima\Desktop\GitHub.png\Tablet-Counter\TabletCounter\obj\Debug\netcoreapp3.1\BarPrefab.baml
-C:\Users\Dima\Desktop\GitHub.png\Tablet-Counter\TabletCounter\obj\Debug\netcoreapp3.1\TabletCounter.csproj.AssemblyReference.cache

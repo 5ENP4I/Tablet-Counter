@@ -90,6 +90,11 @@ namespace TabletCounter
                 PanelChanger.Visibility = Visibility.Visible;
             }
         }
+
+        private void PanelChanger_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
     public class Bar

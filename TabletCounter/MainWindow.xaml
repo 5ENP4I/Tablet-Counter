@@ -27,7 +27,7 @@
 
         </Grid>
 
-        <TabControl x:Name="PanelChanger" Visibility="Visible" TabIndex="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <TabControl x:Name="PanelChanger" Visibility="Visible" TabIndex="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="PanelChanger_SelectionChanged">
             <TabControl.Template>
                 <ControlTemplate TargetType="{x:Type TabControl}">
                     <Grid>
@@ -44,10 +44,16 @@
                 <Label x:Name="Title1" Background="{StaticResource AntiFlashWhite}" Content="Title1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>
             </TabItem>
             <TabItem Header="Group 2" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Stretch">
-                <ScrollViewer  VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <StackPanel x:Name="ParentOfBars" Width="Auto" Margin="10,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left">
-                    </StackPanel>
-                </ScrollViewer>
+                <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                    <Button x:Name="AddButoon" Style="{StaticResource MenuButton}" Background="{StaticResource ByzantineBlue}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,20,10">
+                        <Image Source="data\plus.png" Width="38" Height="38" VerticalAlignment="Top"/>
+                    </Button>
+                    <ScrollViewer x:Name="scrolViever" VerticalScrollBarVisibility="Auto">
+                        <StackPanel x:Name="ParentOfBars" Width ="7680" Grid.Column="0" Margin="10,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
             </TabItem>
             <TabItem Header="Group 3">
                 <Label x:Name="Title3" Background="{StaticResource AntiFlashWhite}" Content="Title3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Margin="5,5,5,5" FontSize="36"/>

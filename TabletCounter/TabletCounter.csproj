@@ -7,21 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="data\checklist.png" />
-    <None Remove="data\settings.png" />
-    <None Remove="data\smallHouse.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="data\checklist.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="data\settings.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="data\smallHouse.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Compile Remove="data\**" />
+    <EmbeddedResource Remove="data\**" />
+    <None Remove="data\**" />
+    <Page Remove="data\**" />
   </ItemGroup>
 
 </Project>
